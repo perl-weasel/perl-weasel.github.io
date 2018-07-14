@@ -1,4 +1,4 @@
-# Bridging the DOM with Page Objects
+# Bridging DOM with Page Objects
 
 ## Web application testing in Perl
 
