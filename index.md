@@ -14,14 +14,14 @@ Weasel integrates with Perl's [BDD](https://en.wikipedia.org/wiki/Behavior-drive
 ## Improving the PageObjects pattern
 There are a [number of issues](page-object-issues) with the standard pattern that **Weasel** solves:
 
-* No hard-coded page flow  
+* **No hard-coded page flow**  
   *Weasel* knows how to map the DOM to PageObjects
-* Well defined component re-use strategy  
+* **Well defined component re-use strategy**  
   *Weasel* maps any part of a page to a PageObject, encouraging re-use of PageObjects
-* Easy changing or replacing PageObjects  
+* **Easy changing or replacing PageObjects**  
   *Weasel* uses aliases for CSS/XPath PageObject search patterns, flexibly adapting to DOM changes
-* Easily extensible
-  **Weasel** built-in aliases for standard HTML tags can be replaced with custom implementations
+* **Easily extensible**  
+  *Weasel* built-in aliases for standard HTML tags can be replaced with custom implementations
 
 Example code:
 
