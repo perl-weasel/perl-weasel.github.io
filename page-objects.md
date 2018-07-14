@@ -24,3 +24,14 @@ sub loginAs {
 }
 ```
 
+The tests then can access the login page as easy as:
+
+```perl
+
+# Return a homepage
+sub test_login {
+   my ($driver) = @_;
+   my $login = Test::MyWebApp::LoginPage->new(driver => $driver);
+   return $login->('testuser', 'testpassword');
+}
+```
