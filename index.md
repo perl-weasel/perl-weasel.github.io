@@ -47,4 +47,4 @@ sub login {
 The fact that *Weasel* doesn't require a PageObject to model an entire page and encourages multiple PageObjects on a single page (in a nested hierarchy), *Weasel* is very well suited to model interaction with single-page web applications.
 
 ## Using *Weasel* without page objects
-Although the biggest benefit in *Weasel* obviously is its support for the PageObject pattern, there's no requirement to use its web driver abstraction and CSS/XPath alias support without PageObjects.
+Although the biggest benefit in *Weasel* obviously is its support for the PageObject pattern, there's no requirement to use its web driver abstraction and CSS/XPath alias support with PageObjects.
