@@ -15,17 +15,12 @@ Weasel integrates with Perl's [BDD](https://en.wikipedia.org/wiki/Behavior-drive
 There are a [number of issues](page-object-issues) with the standard pattern that **Weasel** solves:
 
 * No hard-coded page flow  
-  Because the Weasel library knows how to map DOM elements to PageObjects,
-  there's no need for PageObjects to know the type of the next page in the flow
+  *Weasel* knows how to map the DOM to PageObjects
 * Well defined component re-use strategy  
-  PageObjects need not represent an entire page; they represent an one or more
-  services provided by a specific part of the page -- hence similar services in
-  multiple pages can be abstracted out in a single PageObject
+  *Weasel* maps any part of a page to a PageObject, encouraging re-use of PageObjects between pages
 * Easy changing or replacing PageObjects  
-  The CSS/XPath patterns required to find page objects are registered with Weasel
-  under 'mnemonics' (a descriptive alias) -- when the implementation of the PageObject
-  changes, only the CSS/XPath attached to the mnemonic needs to change, but none of
-  the users of the component need to change
+  *Weasel* uses aliases to identify CSS/XPath search patterns for PageObjects meaning little to
+  no impact on its users when changing PageObject DOM internals
 * Easily extensible
   **Weasel** comes with a set of PageObjects which encapsulate standard HTML tag services
   such as the SELECT and INPUT tags; replacement widgets (such as DojoToolkit's `FilteringSelect`)
