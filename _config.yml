@@ -1,7 +1,7 @@
-title: Perl-weasel.GitHub.io
-description: website
+title: Weasel - Web-application testing with Perl
+description: Bridging the gap between Page Objects and your web testing library
 google_analytics: 
-show_downloads: true
+show_downloads: false
 theme: jekyll-theme-slate
 
 gems:
