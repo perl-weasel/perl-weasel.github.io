@@ -48,3 +48,8 @@ The fact that *Weasel* doesn't require a PageObject to model an entire page and 
 
 ## Using *Weasel* without page objects
 Although the biggest benefit in *Weasel* obviously is its support for the PageObject pattern, there's no requirement to use its web driver abstraction and CSS/XPath alias support with PageObjects.
+
+## Community
+
+* Chat: [Matrix's `perl-weasel` channel](https://riot.im/app/#/room/#perl-weasel:matrix.org)
+* Mailing list: [perl-weasel@googlegroups.com](https://groups.google.com/forum/#!forum/perl-weasel) or [subscribe](perl-weasel-subscribe@googlegroups.com)
