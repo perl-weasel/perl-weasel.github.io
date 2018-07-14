@@ -12,19 +12,30 @@ Weasel integrates with Perl's [BDD](https://en.wikipedia.org/wiki/Behavior-drive
 [Page objects](page-objects) are a way to reduce the dependency between the exact layout of your pages and the implementation of your tests. Webapp testing drivers return DOM elements, but tests want page objects to access the page's services.
 
 ## Improving the PageObjects pattern
-There are a number of issues with the standard pattern that **Weasel** solves:
+There are a [number of issues](page-object-issues) with the standard pattern that **Weasel** solves:
 
 * No hard-coded page flow  
-  ... explain here ...
-* Good support for Single-Page applications  
-  ... explain here ...
+  Because the Weasel library knows how to map DOM elements to PageObjects,
+  there's no need for PageObjects to know the type of the next page in the flow
+* Well defined component re-use strategy  
+  PageObjects need not represent an entire page; they represent an one or more
+  services provided by a specific part of the page -- hence similar services in
+  multiple pages can be abstracted out in a single PageObject
+* Easy changing or replacing PageObjects  
+  The CSS/XPath patterns required to find page objects are registered with Weasel
+  under 'mnemonics' (a descriptive alias) -- when the implementation of the PageObject
+  changes, only the CSS/XPath attached to the mnemonic needs to change, but none of
+  the users of the component need to change
 * Easily extensible
+  **Weasel** comes with a set of PageObjects which encapsulate standard HTML tag services
+  such as the SELECT and INPUT tags; replacement widgets (such as DojoToolkit's `FilteringSelect`)
+  can add their CSS/XPath pattern to the `*select` mnemonic, ensuring either will be found
 
 
 
 ---------------------
 
-The PageObjects pattern is a very good step in the direction of maintainable code. There's one problem with most of the examples shown aronud the web: PageObject service calls return a new PageObject, with the callee instantiating that object. I.e. in the above example, the `LoginPage` returns a `HomePage`. Clearly, the page flow has been coded into the objects, which signals a layering violation: every page objects know about the expected state of the application.
+
 
 
 ## Bridging the Page Object gap
