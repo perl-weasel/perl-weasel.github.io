@@ -17,14 +17,11 @@ There are a [number of issues](page-object-issues) with the standard pattern tha
 * No hard-coded page flow  
   *Weasel* knows how to map the DOM to PageObjects
 * Well defined component re-use strategy  
-  *Weasel* maps any part of a page to a PageObject, encouraging re-use of PageObjects between pages
+  *Weasel* maps any part of a page to a PageObject, encouraging re-use of PageObjects
 * Easy changing or replacing PageObjects  
-  *Weasel* uses aliases to identify CSS/XPath search patterns for PageObjects meaning little to
-  no impact on its users when changing PageObject DOM internals
+  *Weasel* uses aliases for CSS/XPath PageObject search patterns, flexibly adapting to DOM changes
 * Easily extensible
-  **Weasel** comes with a set of PageObjects which encapsulate standard HTML tag services
-  such as the SELECT and INPUT tags; replacement widgets (such as DojoToolkit's `FilteringSelect`)
-  can add their CSS/XPath pattern to the `*select` mnemonic, ensuring either will be found
+  **Weasel** built-in aliases for standard HTML tags can be replaced with custom implementations
 
 
 
