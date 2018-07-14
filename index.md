@@ -23,16 +23,28 @@ There are a [number of issues](page-object-issues) with the standard pattern tha
 * Easily extensible
   **Weasel** built-in aliases for standard HTML tags can be replaced with custom implementations
 
+Example code:
 
+```perl
+package PageObject::App::Login;
 
----------------------
+use Moo;
+extends 'Weasel::Element';
 
+sub login {
+    my ($self, $user, $passwd) = @_;
 
+    $self->find('*labeled', text => 'User')->send_keys($user);
+    $self->find('*labeled', text => 'Password')->send_keys($passwd);
+    $self->find('*button', text => 'Login')->click;
+    
+    return $self;
+};
 
+1;
+```
+## Single-Page Applications
+The fact that *Weasel* doesn't require a PageObject to model an entire page and encourages multiple PageObjects on a single page (in a nested hierarchy), *Weasel* is very well suited to model interaction with single-page web applications.
 
-## Bridging the Page Object gap
-
-Weasel solves this problem: In Weasel, Page Objects *are* DOM elements. Developers build page objects as derivatives of a DOM primitive `Weasel::Element`, letting Weasel know how to recognize page sections as page objects. Then, when a page object queries the page for a specific element, it's automatically mapped to a page object. The page object is then returned.
-
-
-## Using Weasel without page objects
+## Using *Weasel* without page objects
+Although the biggest benefit in *Weasel* obviously is its support for the PageObject pattern, there's no requirement to use its web driver abstraction and CSS/XPath alias support without PageObjects.
