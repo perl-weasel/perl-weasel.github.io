@@ -38,7 +38,14 @@ interaction, employing an entire-page page object pattern introduces
 code duplication again.
 
 Using the italics marked principle, these widgets can be abstracted
-into their own page objects. 
+into their own page objects. When separating the design like this,
+the services of the widgets (i.e. selecting an option, in case of
+a SELECT widget) won't be implemented repeatedly in every page
+object using the widget. The principle *Need not represent an
+entire page* will likely then become *Most often will represent
+part of a page*.
+
+
 
 
 ---------
