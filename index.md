@@ -43,6 +43,10 @@ sub login {
 
 1;
 ```
+The [architecture page](architecture) describes how *Weasel* improves on
+the generic ideas of PageObjects by providing even better encapsulation
+and abstraction.
+
 ## Single-Page Applications
 The fact that *Weasel* doesn't require a PageObject to model an entire page and encourages multiple PageObjects on a single page (in a nested hierarchy), *Weasel* is very well suited to model interaction with single-page web applications.
 
