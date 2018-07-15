@@ -13,3 +13,13 @@ Steps:
 4. Write a BDD step with *Weasel*
 5. Write a BDD feature using a *Weasel* step
 
+
+### Install dependencies
+
+### Create the first PageObject
+
+### Install Perl BDD tools and integration
+
+### Write a BDD step with *Weasel*
+
+### Write a BDD feature using a *Weasel* step
