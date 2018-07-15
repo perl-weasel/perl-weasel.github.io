@@ -24,6 +24,21 @@ The principles above are employed to serve the design goal:
 > This reduces the amount of duplicated code and means that if the UI
 > changes, the fix need only be applied in one place.
 
+In summary: changes to the DOM internals ("page internals" above) should
+impact only a few (preferrably a single) page object's implementation.
+
+All examples around the web show page objects as modelling entire pages.
+Although that works for simple pages which only use strict HTML tags,
+this becomes a problem when an application is implemented as Single Page
+Application (SPA) or when a page uses a widget framework such as
+[Vue-widgets](https://github.com/FlowzPlatform/vue-widgets#readme)
+or [DojoToolkit](http://dojotoolkit.org/). As widgets from those
+toolkits often require specific code for finding the DOM root and
+interaction, employing an entire-page page object pattern introduces
+code duplication again.
+
+Using the italics marked principle, these widgets can be abstracted
+into their own page objects. 
 
 
 ---------
