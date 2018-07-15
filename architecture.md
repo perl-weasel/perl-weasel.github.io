@@ -94,8 +94,22 @@ internals as:
   my $pwd_widget = $self->find('*password', name => 'login_password');
 ```
 
--------------------
-* DOM element to *Weasel* Elements mappers (`Weasel::WidgetHandlers`)
-* 
+### Weasel::WidgetHandlers
 
-* Browser driver (`Weasel::DriverRole`)
+The previous paragraph covered how widgets encapsulate their DOM internals
+by providing FindExpanders in addition to the general encapsulation that
+should be expected from PageObjects.
+
+*Weasel* enables further abstraction: Widgets define their own mapping from
+DOM elements to Perl classes. With this mapping, *Weasel* makes sure that
+values returned by DOM search and modification functions, represent the
+correct widgets. By consequece, the returned values behave both as DOM elements
+*and* provide the page services the caller may expect from them.
+
+The automatic mapping has an additional benefit: With *Weasel*, there's no
+need for large-scale rewriting of tests when an application developer
+chooses to move SELECT implementation to another. As a switch between various
+UIs doesn't influence application functionality, Widgets for the different
+UIs offer the same application services. Due to the fact that the widgets
+themselves encapsulate the DOM and the XPath to find the Widget in the page,
+the test developer doesn't need to be impacted by the change at all.
