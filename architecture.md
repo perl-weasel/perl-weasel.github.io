@@ -53,7 +53,7 @@ publishes a CSS/XPath search pattern using an alias. This keeps the details of
 the DOM internals inside the Widget while the search pattern can be used by
 other Widgets without breaking the encapsulation.
 
-* *Weasel*::FindExpanders
+### *Weasel*::FindExpanders
 
 FindExpanders are functions that, given a set of arguments, return an XPath
 expression to be used for finding one or more PageObjects of a given type.
