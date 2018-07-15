@@ -1,5 +1,7 @@
 # PageObject issues
 
+... the text of this page is under development ...
+
 The PageObject pattern is a great move forward to disentangle the
 DOM structure internals from the functional web application tests.
 Most examples provided on the web solve only one problem where there
