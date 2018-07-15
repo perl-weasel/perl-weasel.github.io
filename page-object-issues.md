@@ -31,7 +31,7 @@ All examples around the web show page objects as modelling entire pages.
 Although that works for simple pages which only use strict HTML tags,
 this becomes a problem when an application is implemented as Single Page
 Application (SPA) or when a page uses a widget framework such as
-[Vue-widgets](https://github.com/FlowzPlatform/vue-widgets#readme)
+[quasar framework](https://github.com/quasarframework/quasar)
 or [DojoToolkit](http://dojotoolkit.org/). As widgets from those
 toolkits often require specific code for finding the DOM root and
 interaction, employing an entire-page page object pattern introduces
