@@ -16,7 +16,18 @@ Steps:
 
 ### Install dependencies
 
+In order to use *Weasel*, you need at least the following Perl packages
+(and their dependencies) installed:
+
+* *Weasel*
+* *Weasel*::Driver::Selenium2
+
+See [the instructions on Perl Maven](https://perlmaven.com/how-to-install-a-perl-module-from-cpan)
+on how to install Perl modules and their dependencies for your platform.
+
 ### Create the first PageObject
+
+
 
 ### Install Perl BDD tools and integration
 
