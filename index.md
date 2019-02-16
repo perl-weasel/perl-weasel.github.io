@@ -8,6 +8,10 @@ Like [Mink](http://mink.behat.org/en/latest/at-a-glance.html), it abstracts away
 
 *Weasel* integrates with Perl's [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development) testing framework ('[pherkin](https://github.com/pjlsergeant/test-bdd-cucumber-perl)') through its [pherkin-extension-weasel](https://github.com/perl-weasel/pherkin-extension-weasel) extension.
 
+*Weasel* features an extensible architecture. There are currently two driver plugins to connect to a web app: the first wraps
+the "regular" Selenium::Remote::Driver module [Weasel::Driver::Selenium2](https://github.com/perl-weasel/weasel-driver-selenium2), the second implements a driver specific for
+development of Weasel itself and its plugins [Weasel::Driver::Mock](https://github.com/perl-weasel/weasel-driver-mock).
+
 ## PageObjects
 [Page objects](page-objects) are a way to reduce the dependency between the exact layout of your pages and the implementation of your tests. Webapp testing drivers return DOM elements, but tests want page objects to access the page's services.
 
