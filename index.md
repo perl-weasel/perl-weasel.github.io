@@ -1,6 +1,6 @@
 # Web-app testing in Perl
 
-## Bridging DOM with Page Objects
+## Bridging DOM and Page Objects
 
 *Weasel* is a library to automate web application tests using Perl, much like [Watir](http://watir.com) for Ruby and [Mink](http://mink.behat.org/en/latest/at-a-glance.html) for PHP.
 
